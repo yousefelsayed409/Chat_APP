@@ -1,21 +1,17 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:chatapp/routes/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:chatapp/bloc/Chat_cubit/chat_cubit.dart';
 import 'package:chatapp/bloc/login_cubit/login_cubit.dart';
-import 'package:chatapp/pages/Chat_page.dart';
-import 'package:chatapp/pages/resgister_page.dart';
 
-import '../constants.dart';
+
 import '../helper/show_snack_bar.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
 
-class loginPage extends StatelessWidget {
+class SignInView extends StatelessWidget {
   bool isLoading = false;
   GlobalKey<FormState> formKey = GlobalKey();
-  static String id = 'loginpage';
 
   String? email, password;
   @override
@@ -128,7 +124,7 @@ class loginPage extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, RegisterPage.id);
+                            Navigator.pushNamed(context, AppRoute.signUpView);
                           },
                           child: const Text(
                             '  Register ',

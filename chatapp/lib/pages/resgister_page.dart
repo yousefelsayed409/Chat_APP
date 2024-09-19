@@ -4,20 +4,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:chatapp/bloc/Register_cubit/register_cubit.dart';
 import 'package:chatapp/pages/Chat_page.dart';
-import 'package:chatapp/pages/login_page.dart';
+import 'package:chatapp/pages/signin_view.dart';
 
 import '../constants.dart';
 import '../helper/show_snack_bar.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_text_field.dart';
 
-class RegisterPage extends StatelessWidget {
+class SignUpView extends StatelessWidget {
   String? email;
 
   String? password;
 
   bool isLoading = false;
-  static String id = 'RegisterPage';
 
   GlobalKey<FormState> formKey = GlobalKey();
 

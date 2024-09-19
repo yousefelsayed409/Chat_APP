@@ -1,18 +1,19 @@
 
+import 'package:chatapp/routes/app_route.dart';
 import 'package:flutter/material.dart';
-import 'package:chatapp/pages/login_page.dart';
+import 'package:chatapp/pages/signin_view.dart';
 import 'package:chatapp/widgets/custom_button.dart';
 
-class WelcomPage extends StatefulWidget {
-  WelcomPage({super.key});
+class SplashView extends StatefulWidget {
+  SplashView({super.key});
   static String id = 'Welcompage';
 
   @override
-  State<WelcomPage> createState() => _WelcomPageState();
+  State<SplashView> createState() => _SplashViewState();
   void Function()? ontap;
 }
 
-class _WelcomPageState extends State<WelcomPage>
+class _SplashViewState extends State<SplashView>
     with SingleTickerProviderStateMixin {
   AnimationController? animationController;
 
@@ -67,7 +68,7 @@ class _WelcomPageState extends State<WelcomPage>
               child: Custombutton(
                   colorbutton: Colors.yellow,
                   onTap: () {
-                    Navigator.pushNamed(context, loginPage.id);
+                    Navigator.pushNamed(context,AppRoute.signInView);
                   },
                   text: 'Get Started'),
             )

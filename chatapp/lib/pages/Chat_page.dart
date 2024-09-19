@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:chatapp/pages/Welcom_Page.dart';
+import 'package:chatapp/pages/splash_view.dart';
 import '../constants.dart';
 import '../models/message.dart';
 import '../widgets/chat_buble.dart';
@@ -37,7 +37,7 @@ class ChatPage extends StatelessWidget {
               actions: [
                 IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, WelcomPage.id);
+                      Navigator.pushNamed(context, SplashView.id);
                     },
                     icon: Icon(Icons.logout))
               ],
