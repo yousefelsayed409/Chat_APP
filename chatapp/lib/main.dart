@@ -16,7 +16,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'firebase_options.dart';
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  print("backkkkkkkkkkkkkkkkkkkkkkkkkk");
+  print("backkkkkkkkkkkkk");
   print(" background message: ${message.notification!.title}");
     print(" background message: ${message.data['name']}");
 
@@ -43,7 +43,7 @@ void main() async {
 }
 
 class ChatApp extends StatelessWidget {
-  const ChatApp({Key? key}) : super(key: key);
+  const ChatApp({super.key});
 
   @override
   Widget build(BuildContext context) {
